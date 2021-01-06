@@ -1,0 +1,5 @@
+FROM mysql:5.7.30
+WORKDIR /docker-entrypoint-initdb.d
+ENV LANG=C.UTF-8
+RUN create database `kun_dam`;\
+&& SET character_set_client = utf8;
